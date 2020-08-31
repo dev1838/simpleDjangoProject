@@ -90,5 +90,7 @@ urlpatterns = [
     path('multistepformexample', views.multistepformexample, name='multistepformexample'),
     path('multistepformexample_save', views.multistepformexample_save, name='multistepformexample_save'),
     path("multipleupload",views.multipleUpload),
-    path("multipleupload_save",views.multipleupload_save)
+    path("multipleupload_save",views.multipleupload_save),
+    path("login_firebase", views.login_firebase),
+    path("firebase_login_save", views.firebase_login_save),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
