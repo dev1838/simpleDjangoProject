@@ -393,3 +393,20 @@ def proceedToLogin(request,email,username,token,provider):
         user_one.backend='django.contrib.auth.backends.ModelBackend'
         login(request,user_one)
         return "login_success"
+
+
+def ajax_file_upload(request):
+    return render(request,"ajax_file_upload.html")
+
+@csrf_exempt
+def ajax_file_upload_save(request):
+    print(request.POST)
+    print(request.FILES)
+    file1=request.FILES['file1']
+    fs=FileSystemStorage()
+    file_1_path=fs.save(file1.name,file1)
+    file2=request.FILES['file2']
+    file_2_path=fs.save(file2.name,file2)
+    print(file_1_path)
+    print(file_2_path)
+    return HttpResponse("Uploaded")

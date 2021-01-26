@@ -93,4 +93,6 @@ urlpatterns = [
     path("multipleupload_save",views.multipleupload_save),
     path("login_firebase", views.login_firebase),
     path("firebase_login_save", views.firebase_login_save),
+    path("ajax_file_upload",views.ajax_file_upload),
+    path("ajax_file_upload_save",views.ajax_file_upload_save),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
